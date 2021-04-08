@@ -12,6 +12,10 @@
     
     <!--ICONO DE LA PESTAÑA-->
     <link rel="icon" href="Logo.png">
+    
+    {{-- Contact styles --}}
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
 </head>
 <body>
     <!-- Navigation -->
@@ -24,18 +28,18 @@
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home
+                <a class="nav-link" href={{route('index')}}>Home
                   <span class="sr-only">(current)</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="Contacto.html">Contacto</a>
+                <a class="nav-link" href={{route('contacto')}}>Contacto</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="Novedades_Actualizadas.php">Novedades</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="Beneficios.html">Beneficios</a>
+                <a class="nav-link" href={{route('beneficios')}}>Beneficios</a>
               </li> 
               <li class="nav-item">
                 <a class="nav-link" href="Login.html">Iniciar Sesión</a>

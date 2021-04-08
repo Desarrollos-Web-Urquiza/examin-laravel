@@ -16,23 +16,25 @@ use App\Http\Controllers\PublicController;
 |
 */
 
-Route::get('/', HomeController::class);
+Route::get('/', HomeController::class)->name("index");
 
-Route::get('nombre', [   NameController::class,  'index'   ])->name("nombre.index");
+Route::get('beneficios', [   PublicController::class,  'benefits'   ])->name("beneficios");
 
-Route::get('beneficios', [   PublicController::class,  'benefits'   ])->name("nombre.beneficios");
+Route::get('contacto', [   PublicController::class,  'contact'   ])->name("contacto");
 
-Route::get('nombre/apellido', [   NameController::class,  "surname"   ])->name("nombre.apellido");
+// Route::get('nombre', [   NameController::class,  'index'   ])->name("nombre.index");
 
-Route::post('nombre', [   NameController::class,  "store"   ])->name("nombre.store");
+// Route::get('nombre/apellido', [   NameController::class,  "surname"   ])->name("nombre.apellido");
 
-Route::get('nombre/{name}', [   NameController::class,  "name"   ])->name("nombre.show");
+// Route::post('nombre', [   NameController::class,  "store"   ])->name("nombre.store");
 
-Route::get('nombre/{name}/edit', [   NameController::class,  "edit"   ])->name("nombre.edit");
+// Route::get('nombre/{name}', [   NameController::class,  "name"   ])->name("nombre.show");
 
-Route::put('nombre/{name}', [   NameController::class,  "update"   ])->name("nombre.update");
+// Route::get('nombre/{name}/edit', [   NameController::class,  "edit"   ])->name("nombre.edit");
 
-Route::delete('nombre/{name}', [   NameController::class,  "destroy"   ])->name("nombre.destroy");   
+// Route::put('nombre/{name}', [   NameController::class,  "update"   ])->name("nombre.update");
+
+// Route::delete('nombre/{name}', [   NameController::class,  "destroy"   ])->name("nombre.destroy");   
 
 // Route::resource('nombre', NameController::class) ->names([
 //     'create' => 'nombre.apellido'

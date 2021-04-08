@@ -13,4 +13,7 @@ class PublicController extends Controller
     public function benefits (){
         return view("public.benefits") ;
     }
+    public function contact (){
+        return view("public.contact") ;
+    }
 }
