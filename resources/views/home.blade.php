@@ -16,14 +16,14 @@
         <div class="carousel-item active" style="background-image: url('images/Logo+.png')">
           <div class="carousel-caption d-none d-md-block">
             <h3>EXAMIN.AR</h3>
-            <p>Evaluciones online a medida.</p>
+            <p class="paragraphWhite">Evaluciones online a medida.</p>
           </div>
         </div>
         <!-- Slide Two - Set the background image for this slide in the line below -->
         <div class="carousel-item" style="background-image: url('images/Clase.png')">
           <div class="carousel-caption d-none d-md-block">
             <h3> Evaluciones online </h3>
-            <p>Examin.ar facilita la implementación de la tecnología.</p>
+            <p class="paragraphWhite">Examin.ar facilita la implementación de la tecnología.</p>
           </div>
         </div>
         <!-- Slide Three - Set the background image for this slide in the line below -->
@@ -37,13 +37,21 @@
               a h3  {
                 text-decoration: none ;
                 color: green;
-              }             
+              }      
+              .paragraphWhite {
+                font-size: 20px;
+                color: white
+              }      
+              .paragraphGreen {
+                font-size: 20px;
+                color: green
+              }       
             </style>              
             
             <div class="fuentecolorida">
             
-                <a href="Beneficios.html"><h3>Descubra los beneficios de los que se está perdiendo</h3></a>
-                <p>Visite nuestra sección de Beneficios para ver porqué debe suscribirse a nuestra página </p> 
+              <a href="Beneficios.html"><h3>Descubra los beneficios de los que se está perdiendo</h3></a>
+              <p class="paragraphGreen">Visite nuestra sección de Beneficios para ver porqué debe suscribirse a nuestra página </p> 
             
             </div>
 

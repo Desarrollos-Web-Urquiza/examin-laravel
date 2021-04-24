@@ -9,9 +9,12 @@
 
     <!-- Custom styles for this template -->
     <link href= {{ asset("/css/half-slider.css" ) }} rel="stylesheet">
+
+    <!-- Estilos personalizados -->
+    <link href= {{ asset("/customStyles.css" ) }} rel="stylesheet">
     
     <!--ICONO DE LA PESTAÑA-->
-    <link rel="icon" href="Logo.png">
+    <link rel="icon" href={{ asset("/images/Logo.png" ) }}>
     
     {{-- Contact styles --}}
     <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -36,13 +39,13 @@
                 <a class="nav-link" href={{route('contacto')}}>Contacto</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="Novedades_Actualizadas.php">Novedades</a>
+                <a class="nav-link" href={{route('novedades')}}>Novedades</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href={{route('beneficios')}}>Beneficios</a>
               </li> 
               <li class="nav-item">
-                <a class="nav-link" href="Login.html">Iniciar Sesión</a>
+                <a class="nav-link" href={{route('login')}}>Iniciar Sesión</a>
               </li>
             </ul>
           </div>

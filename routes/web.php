@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\NameController;
 use App\Http\Controllers\PublicController;
 
 /*
@@ -21,6 +20,10 @@ Route::get('/', HomeController::class)->name("index");
 Route::get('beneficios', [   PublicController::class,  'benefits'   ])->name("beneficios");
 
 Route::get('contacto', [   PublicController::class,  'contact'   ])->name("contacto");
+
+Route::get('novedades', [   PublicController::class,  'news'   ])->name("novedades");
+
+Route::get('login', [   PublicController::class,  'login'   ])->name("login");
 
 // Route::get('nombre', [   NameController::class,  'index'   ])->name("nombre.index");
 
