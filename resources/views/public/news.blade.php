@@ -12,6 +12,7 @@
 		  <br>
 	
 		  <h1 class="mt-5">NOVEDADES</h1>
+		  {{-- <h4 class="mt-5">{{$Page}}</h4> --}}
 		  
 		  <br>
 		  <br>
