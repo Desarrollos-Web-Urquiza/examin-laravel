@@ -17,11 +17,11 @@ class PublicController extends Controller
         return view("public.contact") ;
     }
     public function news (Pages $Pages){
-        $page = Pages::get();
-        // ->select(['Novedad a agregar'])
-        // ->paginate();
-        // return view("public.news", compact("Page")) ;
-        return $page;
+        $page = Pages::get()[0];
+        $page = $page['Novedad a agregar'];
+        
+        return view("public.news", compact("page")) ;
+        // return $page['Novedad a agregar'];
     }
     public function login (){
         return view("public.login") ;
