@@ -4,9 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\pages;
 
+use App\Models\users;
+
 use Illuminate\Http\Request;
 
 use App\Http\Requests\StoreName;
+use PhpParser\Node\Stmt\If_;
 
 class PublicController extends Controller
 {
@@ -26,4 +29,19 @@ class PublicController extends Controller
     public function login (){
         return view("public.login") ;
     }
+
+    public function users (Request $request, Users $Users){
+
+        $users = Users::where("Usuario","=", $request->user)->where("Contrasenia","=", $request->password)->get() ;
+      
+        if($users == "[]")  {
+            $users = redirect()->route('login') ;
+        }  else {
+            $users = $request->all();
+        }
+       
+        return $users;
+    }
+
+   
 }

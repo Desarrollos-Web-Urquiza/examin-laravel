@@ -25,6 +25,8 @@ Route::get('novedades', [   PublicController::class,  'news'   ])->name("novedad
 
 Route::get('login', [   PublicController::class,  'login'   ])->name("login");
 
+Route::post('users', [   PublicController::class,  'users'   ])->name("users");
+
 // Route::get('nombre', [   NameController::class,  'index'   ])->name("nombre.index");
 
 // Route::get('nombre/apellido', [   NameController::class,  "surname"   ])->name("nombre.apellido");

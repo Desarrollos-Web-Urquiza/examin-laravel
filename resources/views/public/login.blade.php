@@ -19,8 +19,10 @@
 				<div align="center"><img src={{ asset("/images/login.jpg" ) }}></div>
 				
 				<!-- FORMULARIO -->
-				<form action="login.php" method="GET">
-				
+				<form action="{{route('users')}}" method="POST">
+					
+					@csrf
+					
 					<div class="container-contact100">
 	
 						<div class="wrap-contact100">
