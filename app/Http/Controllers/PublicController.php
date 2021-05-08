@@ -37,11 +37,15 @@ class PublicController extends Controller
         if($users == "[]")  {
             $users = redirect()->route('login') ;
         }  else {
-            $users = $request->all();
+            // $users = $request->all();
+             $users = redirect()->route('homeProfesor') ;
         }
        
         return $users;
     }
 
-   
+    public function homeProfesor(){
+        return view("public.profesor.homeProfesor") ;
+    }
+       
 }
