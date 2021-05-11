@@ -14,13 +14,14 @@
     <link rel="icon" href={{ asset("/images/Logo.png" ) }}>
     <!-- Custom styles for this template -->
     <link href={{ asset("/css/half-slider.css" ) }} rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href={{ asset("css/main.css" ) }}>
   </head>
 
   <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="index.html">EXAMIN.AR</a>
+        <a class="navbar-brand" href={{route('index')}}>EXAMIN.AR</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -31,10 +32,10 @@
                 <span class="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
               <a class="nav-link" href="ver_alumnos.php">Mis alumnos</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item active dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                Crear
               </a>
@@ -44,12 +45,12 @@
                 <a class="dropdown-item" href="crear_escuela.php">Crear escuela nueva</a>
               </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="generar_evaluacion.php">Generar evalución</a>
-            </li> <li class="nav-item">
+            <li class="nav-item active">
+              <a class="nav-link" href={{route('testGenerator')}}>Generar evalución</a>
+            </li> <li class="nav-item active">
               <a class="nav-link" href="buscar_evaluacion.php">Rendir evaluación</a>
             </li> 
-			      <li class="nav-item">
+			      <li class="nav-item active">
               <a class="nav-link" href="Login.html"> Cambiar de usuario
               <!--BOTÓN DE LOGOUT-->
                 <td><a class="btn btn-danger" href="logout.php">Cerrar Sesión</a></td>

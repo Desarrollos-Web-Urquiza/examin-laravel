@@ -44,8 +44,4 @@ class PublicController extends Controller
         return $users;
     }
 
-    public function homeProfesor(){
-        return view("public.profesor.homeProfesor") ;
-    }
-       
 }

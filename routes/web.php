@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\ProfesorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,7 +28,9 @@ Route::get('login', [   PublicController::class,  'login'   ])->name("login");
 
 Route::post('users', [   PublicController::class,  'users'   ])->name("users");
 
-Route::get('homeProfesor', [   PublicController::class,  'homeProfesor'   ])->name("homeProfesor");
+Route::get('homeProfesor', [   ProfesorController::class,  'homeProfesor'   ])->name("homeProfesor");
+
+Route::get('testGenerator', [   ProfesorController::class,  'testGenerator'   ])->name("testGenerator");
 
 // Route::get('nombre', [   NameController::class,  'index'   ])->name("nombre.index");
 

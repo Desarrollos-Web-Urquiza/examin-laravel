@@ -31,21 +31,21 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
+              <li class="nav-item active">
                 <a class="nav-link" href={{route('index')}}>Home
                   <span class="sr-only">(current)</span>
                 </a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item active">
                 <a class="nav-link" href={{route('contacto')}}>Contacto</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item active">
                 <a class="nav-link" href={{route('novedades')}}>Novedades</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item active">
                 <a class="nav-link" href={{route('beneficios')}}>Beneficios</a>
               </li> 
-              <li class="nav-item">
+              <li class="nav-item active">
                 <a class="nav-link" href={{route('login')}}>Iniciar Sesión</a>
               </li>
             </ul>
