@@ -15,6 +15,8 @@
     <!-- Custom styles for this template -->
     <link href={{ asset("/css/half-slider.css" ) }} rel="stylesheet">
     <link rel="stylesheet" type="text/css" href={{ asset("css/main.css" ) }}>
+    <!-- Estilos personalizados -->
+    <link href= {{ asset("/customStyles.css" ) }} rel="stylesheet">
   </head>
 
   <body>
@@ -28,7 +30,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="Index_Profesor.php">Inicio
+              <a class="nav-link" href={{route('homeProfesor')}}>Inicio
                 <span class="sr-only">(current)</span>
               </a>
             </li>
@@ -51,7 +53,7 @@
               <a class="nav-link" href="buscar_evaluacion.php">Rendir evaluación</a>
             </li> 
 			      <li class="nav-item active">
-              <a class="nav-link" href="Login.html"> Cambiar de usuario
+              <a class="nav-link" href={{route('login')}}> Cambiar de usuario
               <!--BOTÓN DE LOGOUT-->
                 <td><a class="btn btn-danger" href="logout.php">Cerrar Sesión</a></td>
               </a>

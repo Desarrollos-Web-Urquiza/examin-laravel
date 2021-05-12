@@ -24,7 +24,7 @@
   </div>
 </header>
 
-<section class="py-5">
+<section class="py-5" >
   <div class="container">
     <h1>¡BIENVENIDO A LA SECCIÓN DEL PROFESOR DE EXAMIN.AR!</h1>
     <br>
