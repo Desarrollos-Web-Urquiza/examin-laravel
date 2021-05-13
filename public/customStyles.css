@@ -2,7 +2,10 @@
     margin-bottom: 20em;
 }
 .bottom-10 {
-    margin-bottom: 20em;
+    margin-bottom: 10em;
+}
+.bottom-5 {
+    margin-bottom: 5em;
 }
 .top {
     margin-top: 2em;

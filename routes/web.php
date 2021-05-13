@@ -28,9 +28,12 @@ Route::get('login', [   PublicController::class,  'login'   ])->name("login");
 
 Route::post('users', [   PublicController::class,  'users'   ])->name("users");
 
-Route::get('homeProfesor', [   ProfesorController::class,  'homeProfesor'   ])->name("homeProfesor");
+Route::get('Index_Profesor', [   ProfesorController::class,  'homeProfesor'   ])->name("Index_Profesor");
 
-Route::get('testGenerator', [   ProfesorController::class,  'testGenerator'   ])->name("testGenerator");
+Route::get('generar_evaluacion', [   ProfesorController::class,  'testGenerator'   ])->name("generar_evaluacion");
+
+Route::get('buscar_evaluacion', [   ProfesorController::class,  'testSearch'   ])->name("buscar_evaluacion");
+
 
 // Route::get('nombre', [   NameController::class,  'index'   ])->name("nombre.index");
 

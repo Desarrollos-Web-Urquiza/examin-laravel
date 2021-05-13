@@ -30,7 +30,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href={{route('homeProfesor')}}>Inicio
+              <a class="nav-link" href={{route('Index_Profesor')}}>Inicio
                 <span class="sr-only">(current)</span>
               </a>
             </li>
@@ -48,9 +48,9 @@
               </div>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href={{route('testGenerator')}}>Generar evalución</a>
+              <a class="nav-link" href={{route('generar_evaluacion')}}>Generar evalución</a>
             </li> <li class="nav-item active">
-              <a class="nav-link" href="buscar_evaluacion.php">Rendir evaluación</a>
+              <a class="nav-link" href={{route('buscar_evaluacion')}}>Rendir evaluación</a>
             </li> 
 			      <li class="nav-item active">
               <a class="nav-link" href={{route('login')}}> Cambiar de usuario

@@ -19,4 +19,7 @@ class ProfesorController extends Controller
     public function testGenerator(){
         return view("public.profesor.testGenerator") ;
     }      
+    public function testSearch(){
+        return view("public.profesor.testSearch") ;
+    }    
 }
