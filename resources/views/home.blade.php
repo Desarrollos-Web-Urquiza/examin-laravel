@@ -4,7 +4,7 @@
 
 @section('content')
 
-<header>
+  <header>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -29,24 +29,6 @@
         <!-- Slide Three - Set the background image for this slide in the line below -->
         <div class="carousel-item" style="background-image: url('images/manos1.png')">
           <div class="carousel-caption d-none d-md-block">
-            <style>
-              .fuentecolorida   {
-                color: green;
-              }
-              
-              a h3  {
-                text-decoration: none ;
-                color: green;
-              }      
-              .paragraphWhite {
-                font-size: 20px;
-                color: white
-              }      
-              .paragraphGreen {
-                font-size: 20px;
-                color: green
-              }       
-            </style>              
             
             <div class="fuentecolorida">
             
@@ -67,7 +49,7 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-</header>
+  </header>
 
   <!-- Page Content -->
   <section class="py-5">

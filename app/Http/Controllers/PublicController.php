@@ -38,7 +38,7 @@ class PublicController extends Controller
             $users = redirect()->route('login') ;
         }  else {
             // $users = $request->all();
-             $users = redirect()->route('homeProfesor') ;
+            $users = redirect()->route('Index_Profesor') ;
         }
        
         return $users;
