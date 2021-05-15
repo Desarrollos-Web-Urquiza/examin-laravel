@@ -21,5 +21,8 @@ class ProfesorController extends Controller
     }      
     public function testSearch(){
         return view("public.profesor.testSearch") ;
-    }    
+    }
+    public function createStudent(){
+        return view("public.profesor.createStudent") ;
+    }
 }

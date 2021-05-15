@@ -42,7 +42,7 @@
                Crear
               </a>
              <div class ="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-                <a class="dropdown-item" href="crear_alumno.php">Crear alumno nuevo</a>
+                <a class="dropdown-item" href={{route('crear_alumno')}}>Crear alumno nuevo</a>
                 <a class="dropdown-item" href="crear_curso.php">Crear curso nuevo</a>
                 <a class="dropdown-item" href="crear_escuela.php">Crear escuela nueva</a>
               </div>
