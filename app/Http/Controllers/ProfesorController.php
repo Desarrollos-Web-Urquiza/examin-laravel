@@ -28,4 +28,10 @@ class ProfesorController extends Controller
     public function createStudent2(){
         return view("public.profesor.createStudent2") ;
     }
+    public function createCourse(){
+        return view("public.profesor.createCourse") ;
+    }
+    public function createSchool(){
+        return view("public.profesor.createSchool") ;
+    }
 }

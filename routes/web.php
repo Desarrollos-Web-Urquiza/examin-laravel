@@ -38,6 +38,10 @@ Route::get('crear_alumno', [   ProfesorController::class,  'createStudent'   ])-
 
 Route::get('crear_alumno2', [   ProfesorController::class,  'createStudent2'   ])->name("crear_alumno2");
 
+Route::get('crear_curso', [   ProfesorController::class,  'createCourse'   ])->name("crear_curso");
+
+Route::get('crear_escuela', [   ProfesorController::class,  'createSchool'   ])->name("crear_escuela");
+
 
 // Route::get('nombre', [   NameController::class,  'index'   ])->name("nombre.index");
 
