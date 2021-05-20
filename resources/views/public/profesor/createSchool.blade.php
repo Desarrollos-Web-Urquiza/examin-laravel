@@ -1,9 +1,8 @@
 @extends('layouts.profesor')
 
-@section('title-profesor', 'EXAMIN.AR - Crear curso')
+@section('title-profesor', 'EXAMIN.AR - Crear escuela')
 
 @section('content-profesor')
-    
     
     <!-- Page Content -->
     <div class="container top-10 bottom-10">
@@ -14,7 +13,8 @@
 					<h1 align= center>CREAR ESCUELA</h1><br>
 					<h3 align= center>Coloque el nombre de la escuela que desea crear</h3>
 					<!--FORMULARIO-->
-					<form action="insertar_escuela.php"  name="frmEscuela" method="POST">
+					<form action="{{route('addSchool')}}"  name="frmEscuela" method="POST">
+						@csrf
 	  					<div class="container-contact100">
 		  					<div class="wrap-contact100">
 			  					<form class="contact100-form validate-form">

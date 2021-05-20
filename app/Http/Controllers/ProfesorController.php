@@ -34,4 +34,11 @@ class ProfesorController extends Controller
     public function createSchool(){
         return view("public.profesor.createSchool") ;
     }
+    public function myStudents(){
+        return view("public.profesor.myStudents") ;
+    }
+    public function addSchool($request){
+
+        return $request ;
+    }
 }

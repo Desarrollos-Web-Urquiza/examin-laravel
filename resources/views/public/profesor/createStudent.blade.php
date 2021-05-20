@@ -13,7 +13,7 @@
             <h1 align="center">CREAR ALUMNO - PASO 1</h1><br>
             <h3 align="center">Especifique nombre, apellido, DNI y escuela del alumno a crear</h3>
             <!--FORMULARIO-->
-            <form action="crear_alumno2.php" class="contact_form" method="POST">
+            <form action="crear_alumno2" class="contact_form" method="GET">
 	            <div class="container-contact100">
                 <div class="wrap-contact100">
                   <form class="contact100-form validate-form">
