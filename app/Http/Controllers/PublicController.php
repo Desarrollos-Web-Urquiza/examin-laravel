@@ -24,7 +24,6 @@ class PublicController extends Controller
         $page = $page['Novedad a agregar'];
         
         return view("public.news", compact("page")) ;
-        // return $page['Novedad a agregar'];
     }
     public function login (){
         return view("public.login") ;

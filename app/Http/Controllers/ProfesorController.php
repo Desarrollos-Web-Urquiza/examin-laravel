@@ -2,14 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\pages;
-
-use App\Models\users;
-
 use Illuminate\Http\Request;
-
 use App\Http\Requests\StoreName;
-use PhpParser\Node\Stmt\If_;
+use App\Models\schools;
 
 class ProfesorController extends Controller
 {
@@ -28,8 +23,17 @@ class ProfesorController extends Controller
     public function createStudent2(){
         return view("public.profesor.createStudent2") ;
     }
-    public function createCourse(){
-        return view("public.profesor.createCourse") ;
+    public function createCourse(schools $schools){
+        $Schools = schools::get();
+        $schoolsValues = []  ;
+        $i = 0 ;
+        foreach ($Schools as $value){
+            $schoolsValues[$i] = $value['Escuela'] ;
+            $i++ ;
+        } 
+
+        return view("public.profesor.createCourse",  compact('schoolsValues')) ;
+        // return $schoolsValues ;
     }
     public function createSchool(){
         return view("public.profesor.createSchool") ;
@@ -37,8 +41,8 @@ class ProfesorController extends Controller
     public function myStudents(){
         return view("public.profesor.myStudents") ;
     }
-    public function addSchool($request){
-
-        return $request ;
+    public function addSchool(Request $request, schools $schools){
+        schools::create($request->all());
+        return redirect()->route('crear_escuela')  ;
     }
 }

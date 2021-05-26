@@ -34,6 +34,19 @@
 											<label class="label-input100" >
 											</label>
 											<select  class="input100" name="escuela"><br><br>
+												<?php	
+													// echo $schoolsValues ;
+													$i = 0 ;
+													foreach ($schoolsValues as $value)	{
+														echo '<option value=' . '"' . $value . '"' . ">" ;
+														
+														echo $value; 
+												
+														echo "</option>" ;
+														$i++ ;
+													} 
+
+												?>
 											</select>
 											<span class="focus-input100"></span>
 											<span class="focus-input100"></span>

@@ -13,7 +13,7 @@
 					<h1 align= center>CREAR ESCUELA</h1><br>
 					<h3 align= center>Coloque el nombre de la escuela que desea crear</h3>
 					<!--FORMULARIO-->
-					<form action="{{route('addSchool')}}"  name="frmEscuela" method="POST">
+					<form action={{route('crear_escuela')}}  name="frmEscuela" method="POST">
 						@csrf
 	  					<div class="container-contact100">
 		  					<div class="wrap-contact100">
