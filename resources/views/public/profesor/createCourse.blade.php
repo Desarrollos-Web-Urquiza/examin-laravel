@@ -10,10 +10,11 @@
 			<div class="col-lg-12 text-center">
 				<section id="form">	  
 					<!-- TÍITULO-->
-					<h1 align= center>CREAR CURSO</h1></align><br>
-					<h3 align= center>Especifique descripción del curso y asígnele escuela</h3></align>
+					<h1 align="center">CREAR CURSO</h1><br>
+					<h3 align="center">Especifique descripción del curso y asígnele escuela</h3>
 					<!--FORMULARIO-->
-					<form action="insertar_curso.php"  name="frmCurso" method="POST">
+					<form action={{route('crear_curso')}}  name="frmCurso" method="POST">
+						@csrf
 						<div class="container-contact100">
 							<div class="wrap-contact100">
 								<form class="contact100-form validate-form">
@@ -23,7 +24,7 @@
 									<div class="wrap-input100 validate-input" >
 										<label class="label-input100" >
 										</label>
-										<input class="input100" type="text"   name="curso" >
+										<input class="input100" type="text"   name="Descripcion" />
 										<span class="focus-input100"></span>
 									</div>
 									<form class="contact100-form validate-form">
@@ -33,19 +34,17 @@
 										<div class="wrap-input100 validate-input" >
 											<label class="label-input100" >
 											</label>
-											<select  class="input100" name="escuela"><br><br>
+											<select  class="input100" name="Escuela_id"><br><br>
 												<?php	
-													// echo $schoolsValues ;
 													$i = 0 ;
-													foreach ($schoolsValues as $value)	{
-														echo '<option value=' . '"' . $value . '"' . ">" ;
+													foreach ($Schools as $value)	{
+														echo '<option value=' . '"' . $value['id'] . '"' . ">" ;
 														
-														echo $value; 
+														echo $value['Escuela']; 
 												
 														echo "</option>" ;
 														$i++ ;
 													} 
-
 												?>
 											</select>
 											<span class="focus-input100"></span>

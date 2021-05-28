@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreName;
 use App\Models\schools;
+use App\Models\courses;
 
 class ProfesorController extends Controller
 {
@@ -17,23 +18,16 @@ class ProfesorController extends Controller
     public function testSearch(){
         return view("public.profesor.testSearch") ;
     }
-    public function createStudent(){
-        return view("public.profesor.createStudent") ;
+    public function createStudent(schools $schools){
+        $Schools = schools::get();
+        return view("public.profesor.createStudent",  compact('Schools') ) ;
     }
     public function createStudent2(){
         return view("public.profesor.createStudent2") ;
     }
     public function createCourse(schools $schools){
         $Schools = schools::get();
-        $schoolsValues = []  ;
-        $i = 0 ;
-        foreach ($Schools as $value){
-            $schoolsValues[$i] = $value['Escuela'] ;
-            $i++ ;
-        } 
-
-        return view("public.profesor.createCourse",  compact('schoolsValues')) ;
-        // return $schoolsValues ;
+        return view("public.profesor.createCourse",  compact('Schools')) ;
     }
     public function createSchool(){
         return view("public.profesor.createSchool") ;
@@ -44,5 +38,9 @@ class ProfesorController extends Controller
     public function addSchool(Request $request, schools $schools){
         schools::create($request->all());
         return redirect()->route('crear_escuela')  ;
+    }
+    public function addCourse(Request $request, courses $courses){
+        courses::create($request->all());
+        return redirect()->route('crear_curso')  ;
     }
 }

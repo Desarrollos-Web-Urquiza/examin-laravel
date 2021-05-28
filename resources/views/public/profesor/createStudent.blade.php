@@ -42,7 +42,18 @@
                       <div class="wrap-input100 validate-input" >
 				                <label class="label-input100" >
 						            </label>
-				                <select  class="input100" name="escuela"><br><br>
+				                <select  class="input100" name="Escuela_id"><br><br>
+                          <?php	
+                            $i = 0 ;
+                            foreach ($Schools as $value)	{
+                              echo '<option value=' . '"' . $value['id'] . '"' . ">" ;
+                              
+                              echo $value['Escuela']; 
+                          
+                              echo "</option>" ;
+                              $i++ ;
+                            } 
+                          ?>
                         </select>
 				              </div>
 				              <div class="container-contact100-form-btn">

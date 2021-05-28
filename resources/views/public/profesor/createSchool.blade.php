@@ -10,8 +10,8 @@
 			<div class="col-lg-12 text-center">
   				<section id="form">
 					<!-- TÍITULO-->
-					<h1 align= center>CREAR ESCUELA</h1><br>
-					<h3 align= center>Coloque el nombre de la escuela que desea crear</h3>
+					<h1 align="center">CREAR ESCUELA</h1><br>
+					<h3 align="center">Coloque el nombre de la escuela que desea crear</h3>
 					<!--FORMULARIO-->
 					<form action={{route('crear_escuela')}}  name="frmEscuela" method="POST">
 						@csrf
@@ -30,7 +30,7 @@
 								</form>
 				  				<div class="container-contact100-form-btn">
 					  				<button class="contact100-form-btn" type="submit">
-						  				SIGUIENTE
+						  				CREAR
 					  				</button>
 				  				</div>
 							</div>
