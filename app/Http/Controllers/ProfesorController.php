@@ -22,8 +22,9 @@ class ProfesorController extends Controller
         $Schools = schools::get();
         return view("public.profesor.createStudent",  compact('Schools') ) ;
     }
-    public function createStudent2(){
-        return view("public.profesor.createStudent2") ;
+    public function createStudent2(courses $courses){
+        $courses = courses::get();
+        return view("public.profesor.createStudent2",  compact('courses')) ;
     }
     public function createCourse(schools $schools){
         $Schools = schools::get();

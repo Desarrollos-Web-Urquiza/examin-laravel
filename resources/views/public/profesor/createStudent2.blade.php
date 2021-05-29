@@ -3,7 +3,16 @@
 @section('title-profesor', 'EXAMIN.AR - Crear alumno paso 2')
 
 @section('content-profesor')
-    
+
+	<?php
+		$NombreyApellido = $_GET["NombreyApellido"] ;
+		$DNI = $_GET["DNI"] ;
+		$idWithSchool = $_GET["Escuela_id"] ;
+		$arraySchool = preg_split ("/\&/", $idWithSchool ); 
+		$id_school = $arraySchool[0] ;
+		$School = $arraySchool[1] ;
+		
+	?>
     <!-- Page Content -->
     <div class="container top-10 bottom-5">
     	<div class="row">
@@ -14,7 +23,7 @@
 					<h3 align="center">Ahora especifique el curso al que pertenece el alumno a crear</h3>
 					<!--FORMULARIO-->
 					<form action="insertar_edicion.php" class="contact_form" method="POST">
-						<h2 align="center">Escuela seleccionada: ""</h2>
+						<h2 align="center">Escuela seleccionada: "<?php echo $School ; ?>"</h2>
 						<div class="container-contact100">
 							<form class="contact100-form validate-form">
 								<div class="wrap-contact100">
@@ -24,7 +33,7 @@
 									<div class="wrap-input100 validate-input" >
 										<label class="label-input100" >	
 										</label>
-										<select  class="input100" name="curso"><br><br>
+										<select  class="input100" name="Curso_id"><br><br>
 											<span class="focus-input100"></span>
 										</select>
 										<span class="focus-input100"></span>
@@ -35,6 +44,10 @@
 										</button>
 									</div>
 								</div>
+								<!--PASO COMO PARAMETROS "OCULTOS" EL nombreyapellido Y SU id, EL dni Y LA ESCUELA-->
+								<input name="NombreyApellido" type="hidden" value="<?php echo $NombreyApellido ; ?>" >
+								<input name="DNI" type="hidden" value="<?php echo $DNI ; ?>" >
+								<input name="escuela_id" type="hidden" value="<?php echo $id_school ; ?>" >
 							</form>
 						</div>	  
 					</form>

@@ -46,7 +46,7 @@
                           <?php	
                             $i = 0 ;
                             foreach ($Schools as $value)	{
-                              echo '<option value=' . '"' . $value['id'] . '"' . ">" ;
+                              echo '<option value=' . '"' . $value['id'] . "&" . $value['Escuela'] . '"' . ">" ;
                               
                               echo $value['Escuela']; 
                           
