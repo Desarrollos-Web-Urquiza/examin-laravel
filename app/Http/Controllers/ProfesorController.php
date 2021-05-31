@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\StoreName;
 use App\Models\schools;
 use App\Models\courses;
+use App\Models\students;
 
 class ProfesorController extends Controller
 {
@@ -43,5 +44,9 @@ class ProfesorController extends Controller
     public function addCourse(Request $request, courses $courses){
         courses::create($request->all());
         return redirect()->route('crear_curso')  ;
+    }
+    public function addStudent(Request $request, students $students){
+        students::create($request->all());
+        return redirect()->route('ver_alumnos')  ;
     }
 }

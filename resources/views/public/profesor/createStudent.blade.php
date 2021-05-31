@@ -54,7 +54,9 @@
                               $i++ ;
                             } 
                           ?>
+                          <span class="focus-input100"></span>
                         </select>
+                        <span class="focus-input100"></span>
 				              </div>
 				              <div class="container-contact100-form-btn">
                         <button class="contact100-form-btn" type="submit">
