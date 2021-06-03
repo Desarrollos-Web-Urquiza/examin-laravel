@@ -32,6 +32,8 @@ Route::get('Index_Profesor', [   ProfesorController::class,  'homeProfesor'   ])
 
 Route::get('generar_evaluacion', [   ProfesorController::class,  'testGenerator'   ])->name("generar_evaluacion");
 
+Route::get('generar_preguntas', [   ProfesorController::class,  'testQuestionsGenerator'   ])->name("generar_preguntas");
+
 Route::get('buscar_evaluacion', [   ProfesorController::class,  'testSearch'   ])->name("buscar_evaluacion");
 
 Route::get('crear_alumno', [   ProfesorController::class,  'createStudent'   ])->name("crear_alumno");
