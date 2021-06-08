@@ -14,11 +14,12 @@
         <h1 class="mt-5">INGRESE LAS PREGUNTAS</h1>
         <br>
         <!--FORMULARIO-->
-	      <form action="" class="contact_form" method="POST">
+	      <form action={{route('crear_evaluacion')}} class="contact_form" method="POST">
+          @csrf
           <!--IMPRIME TITULO DE EVALUCACION EN PANTALLA-->
           <h3> <?php echo $titulo  ; ?> </h3>	
           <?php
-            /*EL BUCLE "FOR" IMPRIME TANTOS "INPUTS" COMO SE HAYA INGRESADO EN LA PÁGINA ANTERIOR ("generar_evaluacion.php")*/
+            /*EL BUCLE "FOR" IMPRIME TANTOS "INPUTS" COMO SE HAYA INGRESADO EN LA PÁGINA ANTERIOR ("generar_evaluacion")*/
             for ($i=1; $i <= $preguntas ; $i++   ) { 		
           ?>
           <br><br>	Pregunta <?php echo $i; ?><br><br>        
@@ -32,6 +33,7 @@
           <hr size="5px" width="100%" align="center" color="#4272d7"/>
           <?php } ?>
           <br>
+          <input name="Titulo" type="hidden" value="<?php echo $titulo ; ?>" >
           <!--BOTÓN DE SUBMIT-->
           <div align="right">
             <input class="btn btn-primary btn-lg" type="submit" value="Insertar" /> 

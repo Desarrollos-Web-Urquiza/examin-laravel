@@ -7,6 +7,7 @@ use App\Http\Requests\StoreName;
 use App\Models\schools;
 use App\Models\courses;
 use App\Models\students;
+use App\Models\tests;
 
 class ProfesorController extends Controller
 {
@@ -51,5 +52,10 @@ class ProfesorController extends Controller
     public function addStudent(Request $request, students $students){
         students::create($request->all());
         return redirect()->route('ver_alumnos')  ;
+    }
+    public function addTest(Request $request, tests $tests){
+        // tests::create($request->all());
+        // return redirect()->route('ver_alumnos')  ;
+        return $request  ;
     }
 }

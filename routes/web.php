@@ -52,6 +52,8 @@ Route::post('crear_curso', [   ProfesorController::class,  'addCourse'   ])->nam
 
 Route::post('crear_alumno', [   ProfesorController::class,  'addStudent'   ])->name("addStudent");
 
+Route::post('crear_evaluacion', [   ProfesorController::class,  'addTest'   ])->name("crear_evaluacion");
+
 // Route::get('nombre', [   NameController::class,  'index'   ])->name("nombre.index");
 
 // Route::get('nombre/apellido', [   NameController::class,  "surname"   ])->name("nombre.apellido");

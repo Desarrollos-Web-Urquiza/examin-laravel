@@ -34,14 +34,14 @@
 								<div class="wrap-input100 validate-input" >
 									<label class="label-input100" >
 									</label>
-									<input class="input100" type="text"  placeholder="Ingrese usuario" name="user" >
+									<input class="input100" type="text"  placeholder="Ingrese usuario" name="user" required >
 									<span class="focus-input100"></span>
 								</div>
 								
 								<div class="wrap-input100 validate-input">
 									<label class="label-input100" >  
 									</label>
-									<input  class="input100" type="password" placeholder="Ingrese contraseña"  name="password">
+									<input  class="input100" type="password" placeholder="Ingrese contraseña"  name="password" required>
 									<span class="focus-input100"></span>
 								</div>
 	
