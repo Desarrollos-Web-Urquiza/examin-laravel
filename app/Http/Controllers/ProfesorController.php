@@ -8,6 +8,7 @@ use App\Models\schools;
 use App\Models\courses;
 use App\Models\students;
 use App\Models\tests;
+use App\Models\questions;
 
 class ProfesorController extends Controller
 {
@@ -53,9 +54,21 @@ class ProfesorController extends Controller
         students::create($request->all());
         return redirect()->route('ver_alumnos')  ;
     }
-    public function addTest(Request $request, tests $tests){
-        // tests::create($request->all());
-        // return redirect()->route('ver_alumnos')  ;
-        return $request  ;
+    public function addTest(Request $request, tests $tests, questions $questions){
+        $tets = tests::create([
+            'Titulo' => $request->Titulo,   
+            'Fecha' => date("Y-m-d")
+        ]);
+        
+        for($i=1; $i<=$request->Preguntas ; $i++)    {
+            $questionNumber = "p" . $i;
+            $question = $request->$questionNumber;
+            questions::create([
+               'Preguntas' =>  $question,
+               'id_evaluaciones_titulos' => $tets['id']
+            ]);
+        }
+
+        return redirect()->route('generar_evaluacion')  ;
     }
 }
