@@ -3,7 +3,14 @@
 @section('title-profesor', 'EXAMIN.AR - Buscar evaluación')
 
 @section('content-profesor')
-
+  <?php
+    echo $data['tests'];
+    // $i = 0 ;
+    // foreach ($data['students'] as $value)	{
+    //   echo $value['NombreyApellido'];
+    //   $i++ ;
+    // } 
+  ?>
   <!-- Page Content -->
   <div class="container top-4 bottom-5">
     <div class="row">
@@ -14,7 +21,7 @@
         <!--IMAGEN del telefono y el sobre -->
         <img src={{ asset("/images/evaluacion2.png")}} alt="SYMBOL-MAIL"> 
         <!--FORMULARIO-->
-        <form action="responder_preguntas.php" class="contact_form" method="POST">
+        <form action={{route('')}} class="contact_form" method="POST">
           <div class="container-contact100">
             <div class="wrap-contact100">
               <span class="contact100-form-title">
@@ -24,6 +31,13 @@
                 <label class="label-input100" >
                 </label>
                 <select  class="input100" name="evaluacion">
+                  <?php
+                    foreach ($data['tests'] as $value)	{
+                      echo '<option value='. '"' . $value['Titulo'] . '"' . ">" ;
+                      echo $value['Titulo']; 
+                      echo "</option>" ;
+                    } 
+                  ?>
                 </select>
                 <span class="focus-input100"></span>
               </div>
@@ -35,6 +49,13 @@
                 </label>
                 <select class="input100"  name="Alumno">
                   <span class="focus-input100"></span>
+                  <?php
+                    foreach ($data['students'] as $value)	{
+                      echo '<option value='. '"' . $value['NombreyApellido'] . '"' . ">" ;
+                      echo $value['NombreyApellido']; 
+                      echo "</option>" ;
+                    } 
+                  ?>
                 </select>
                 <span class="focus-input100"></span>
               </div>
@@ -45,8 +66,15 @@
                 <label class="label-input100" >  
                 </label>
                 <select  class="input100" name="DNI"><br><br>
+                  <span class="focus-input100"></span>
+                  <?php
+                    foreach ($data['students'] as $value)	{
+                      echo '<option value='. '"' . $value['DNI'] . '"' . ">" ;
+                      echo $value['DNI']; 
+                      echo "</option>" ;
+                    } 
+                  ?>
                 </select>
-                <span class="focus-input100"></span>
               </div>
               <div class="container-contact100-form-btn">
                 <button class="contact100-form-btn" type="submit">

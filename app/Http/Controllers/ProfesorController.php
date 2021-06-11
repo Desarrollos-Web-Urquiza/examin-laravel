@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\View;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreName;
 use App\Models\schools;
@@ -21,8 +22,15 @@ class ProfesorController extends Controller
     public function testQuestionsGenerator(){
         return view("public.profesor.testQuestionsGenerator") ;
     }      
-    public function testSearch(){
-        return view("public.profesor.testSearch") ;
+    public function testSearch(tests $tests, students $students ){
+        $Tests = tests::get();
+        $Students = students::get();
+        $data = [
+            'tests'  => $Tests,
+            'students'   => $Students
+        ];
+        
+        return View::make("public.profesor.testSearch", ['data' => $data]) ;
     }
     public function createStudent(schools $schools){
         $Schools = schools::get();
