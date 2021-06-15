@@ -1,8 +1,8 @@
-@extends('layouts.profesor')
+@extends('layouts.onlyFooter')
 
-@section('title-profesor', 'EXAMIN.AR - Buscar evaluación')
+@section('title-footer', 'EXAMIN.AR - Evaluación en curso')
 
-@section('content-profesor')
+@section('content-footer')
    
   <!-- Page Content -->
   <div class="container top-4 bottom-5">
@@ -14,7 +14,7 @@
         <!--IMAGEN del telefono y el sobre -->
         <img src={{ asset("/images/evaluacion2.png")}} alt="SYMBOL-MAIL"> 
         <!--FORMULARIO-->
-        <form action={{route('responder_preguntas')}} class="contact_form" method="GET">
+        <form action="" class="contact_form" method="POST">
           <div class="container-contact100">
             <div class="wrap-contact100">
               <span class="contact100-form-title">

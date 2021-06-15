@@ -50,6 +50,9 @@ class ProfesorController extends Controller
     public function myStudents(){
         return view("public.profesor.myStudents") ;
     }
+    public function answerQuestions(){
+        return view("public.profesor.answerQuestions") ;
+    }
     public function addSchool(Request $request, schools $schools){
         schools::create($request->all());
         return redirect()->route('crear_escuela')  ;

@@ -46,6 +46,8 @@ Route::get('crear_escuela', [   ProfesorController::class,  'createSchool'   ])-
 
 Route::get('ver_alumnos', [   ProfesorController::class,  'myStudents'   ])->name("ver_alumnos");
 
+Route::get('responder_preguntas', [   ProfesorController::class,  'answerQuestions'   ])->name("responder_preguntas");
+
 Route::post('crear_escuela', [   ProfesorController::class,  'addSchool'   ])->name("addSchool");
 
 Route::post('crear_curso', [   ProfesorController::class,  'addCourse'   ])->name("addCourse");
