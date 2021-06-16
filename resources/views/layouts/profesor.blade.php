@@ -73,18 +73,14 @@
       </div>
     </nav>      
 
-    @yield('content-profesor')
-    
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; EXAMIN.AR 2016-2018</p>
-      </div>
-      <!-- /.container -->
-    </footer>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src= {{ asset("./vendor/jquery/jquery.min.js" ) }}></script>
-    <script src= {{ asset("./vendor/bootstrap/js/bootstrap.bundle.min.js" ) }}></script>
+    @yield('content-profesor')<!-- page content -->
+      
   </body>
+  
+  @include('layouts.onlyFooter')<!-- footer -->
+  
+  <!-- Bootstrap core JavaScript -->
+  <script src= {{ asset("./vendor/jquery/jquery.min.js" ) }}></script>
+  <script src= {{ asset("./vendor/bootstrap/js/bootstrap.bundle.min.js" ) }}></script>
+
 </html>
