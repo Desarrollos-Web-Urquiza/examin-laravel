@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\SessionController;
+
 use App\Models\pages;
 
 use App\Models\users;
@@ -29,18 +31,19 @@ class PublicController extends Controller
         return view("public.login") ;
     }
 
-    public function users (Request $request, Users $Users){
+    public function users (Request $request, Users $Users, SessionController $SessionController){
 
+        
         $users = Users::where("Usuario","=", $request->user)->where("Contrasenia","=", $request->password)->get() ;
       
         if($users == "[]")  {
             $users = redirect()->route('login') ;
         }  else {
             // $users = $request->all();
+            $SessionController->storeSessionData($request);
             $users = redirect()->route('Index_Profesor') ;
         }
-       
-        return $users;
+        return $users ;
     }
 
 }

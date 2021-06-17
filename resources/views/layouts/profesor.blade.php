@@ -65,7 +65,7 @@
 			      <li class="nav-item active">
               <a class="nav-link" href={{route('login')}}> Cambiar de usuario
               <!--BOTÓN DE LOGOUT-->
-                <td><a class="btn btn-danger" href="logout.php">Cerrar Sesión</a></td>
+                <td><a class="btn btn-danger" href={{route('session.delete')}}>Cerrar Sesión</a></td>
               </a>
             </li>
           </ul>

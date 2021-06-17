@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ProfesorController;
+use App\Http\Controllers\SessionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -56,22 +57,12 @@ Route::post('crear_alumno', [   ProfesorController::class,  'addStudent'   ])->n
 
 Route::post('crear_evaluacion', [   ProfesorController::class,  'addTest'   ])->name("crear_evaluacion");
 
-// Route::get('nombre', [   NameController::class,  'index'   ])->name("nombre.index");
+Route::get('session/get', [   SessionController::class,  'getSessionDate'   ])->name("session.get");
 
-// Route::get('nombre/apellido', [   NameController::class,  "surname"   ])->name("nombre.apellido");
+Route::get('session/set', [   SessionController::class,  'storeSessionData'   ])->name("session.store");
 
-// Route::post('nombre', [   NameController::class,  "store"   ])->name("nombre.store");
+Route::get('session/remove', [   SessionController::class,  'deleteSessionData'   ])->name("session.delete");
 
-// Route::get('nombre/{name}', [   NameController::class,  "name"   ])->name("nombre.show");
 
-// Route::get('nombre/{name}/edit', [   NameController::class,  "edit"   ])->name("nombre.edit");
-
-// Route::put('nombre/{name}', [   NameController::class,  "update"   ])->name("nombre.update");
-
-// Route::delete('nombre/{name}', [   NameController::class,  "destroy"   ])->name("nombre.destroy");   
-
-// Route::resource('nombre', NameController::class) ->names([
-//     'create' => 'nombre.apellido'
-// ]);
 
 
