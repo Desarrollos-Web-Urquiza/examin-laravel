@@ -13,10 +13,11 @@ use App\Models\questions;
 
 class ProfesorController extends Controller
 {
-    // public function __construct()
-    // {
-    //     $this->middleware(['auth', 'verifySession']);
-    // }
+     public function __construct()
+     {
+        $this->middleware('auth');
+        //$this->middleware('verifySession', ['only' => ['index']]);
+    }
     //https://www.youtube.com/watch?v=kT-eMPudaxU
     public function homeProfesor(){
         return view("public.profesor.homeProfesor") ;

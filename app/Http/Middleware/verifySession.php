@@ -16,7 +16,7 @@ class verifySession
      */
     public function handle(Request $request, Closure $next)
     {
-        if( $request->session()->has('name') )  {
+        if(  $request->session()->has('name') )  {
             return $next($request);
         }   else    {
             echo 'No data in the session';
